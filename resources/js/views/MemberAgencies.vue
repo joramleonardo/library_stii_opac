@@ -13,7 +13,7 @@
                                 <div class="job-item p-4 mb-4">
                                     <div class="row g-4">
                                         <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                            <img class="flex-shrink-0 img-fluid border rounded" src="images/fnri.png" alt="" style="width: 80px; height: 80px;">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/fnri.png" alt="" style="width: 80px; height: 80px;">
                                             <div class="text-start ps-4">
                                                 <h5 class="mb-3">Food and Nutrition Research Institute</h5>
                                                 <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>FNRI, DOST Compound, General Santos Ave, Taguig</span><br>
@@ -30,7 +30,7 @@
                                 <div class="job-item p-4 mb-4">
                                     <div class="row g-4">
                                         <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                            <img class="flex-shrink-0 img-fluid border rounded" src="images/itdi.png" alt="" style="width: 80px; height: 80px;">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/itdi.png" alt="" style="width: 80px; height: 80px;">
                                             <div class="text-start ps-4">
                                                 <h5 class="mb-3">Industrial Technology Development Institute</h5>
                                                 <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>DOST Complex, Bicutan, Taguig City 1631 Taguig, Philippines</span><br>
@@ -47,7 +47,7 @@
                                 <div class="job-item p-4 mb-4">
                                     <div class="row g-4">
                                         <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                            <img class="flex-shrink-0 img-fluid border rounded" src="images/pcieerrd.png" alt="" style="width: 80px; height: 80px;">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/pcieerrd.png" alt="" style="width: 80px; height: 80px;">
                                             <div class="text-start ps-4">
                                                 <h5 class="mb-3">Philippine Council for Industry, Energy and Emerging Technology Research and Development</h5>
                                                 <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>4th and 5th Level Science Heritage Bldg., 
@@ -66,7 +66,7 @@
                                 <div class="job-item p-4 mb-4">
                                     <div class="row g-4">
                                         <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                            <img class="flex-shrink-0 img-fluid border rounded" src="images/pchrd.png" alt="" style="width: 80px; height: 80px;">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/pchrd.png" alt="" style="width: 80px; height: 80px;">
                                             <div class="text-start ps-4">
                                                 <h5 class="mb-3">Philippine Council for Health Research and Development</h5>
                                                 <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>Saliksik Building, DOST Compound, 
@@ -85,7 +85,7 @@
                                 <div class="job-item p-4 mb-4">
                                     <div class="row g-4">
                                         <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                            <img class="flex-shrink-0 img-fluid border rounded" src="images/tapi.png" alt="" style="width: 80px; height: 80px;">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/tapi.png" alt="" style="width: 80px; height: 80px;">
                                             <div class="text-start ps-4">
                                                 <h5 class="mb-3">Technology Application and Promotion Institute</h5>
                                                 <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>TAPI Building, DOST Compound, 
@@ -104,7 +104,7 @@
                                 <div class="job-item p-4 mb-4">
                                     <div class="row g-4">
                                         <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                            <img class="flex-shrink-0 img-fluid border rounded" src="images/stii.png" alt="" style="width: 80px; height: 80px;">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/stii.png" alt="" style="width: 80px; height: 80px;">
                                             <div class="text-start ps-4">
                                                 <h5 class="mb-3">Science and Technology Information Institute</h5>
                                                 <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>STII Bldg. ,Gen. Santos Ave., 
@@ -123,7 +123,7 @@
                                 <div class="job-item p-4 mb-4">
                                     <div class="row g-4">
                                         <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                            <img class="flex-shrink-0 img-fluid border rounded" src="images/sei.png" alt="" style="width: 80px; height: 80px;">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/sei.png" alt="" style="width: 80px; height: 80px;">
                                             <div class="text-start ps-4">
                                                 <h5 class="mb-3">Science Education Institute</h5>
                                                 <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>Level 2, Philippine Science Heritage Building, DOST Compound, 
@@ -141,7 +141,7 @@
                                 <div class="job-item p-4 mb-4">
                                     <div class="row g-4">
                                         <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                            <img class="flex-shrink-0 img-fluid border rounded" src="images/logo-dost.png" alt="" style="width: 80px; height: 80px;">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/nast.jpg" alt="" style="width: 80px; height: 80px;">
                                             <div class="text-start ps-4">
                                                 <h5 class="mb-3">National Academy of Science and Technology</h5>
                                                 <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>3/F Science Heritage Center Building, DOST Complex, 
@@ -159,7 +159,7 @@
                                 <div class="job-item p-4 mb-4">
                                     <div class="row g-4">
                                         <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                            <img class="flex-shrink-0 img-fluid border rounded" src="images/logo-dost.png" alt="" style="width: 80px; height: 80px;">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/asti.jpg" alt="" style="width: 80px; height: 80px;">
                                             <div class="text-start ps-4">
                                                 <h5 class="mb-3">Advanced Science and Technology Institute</h5>
                                                 <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>DOST-ASTI Bldg., UP Technology Park Complex, 
@@ -177,7 +177,7 @@
                                 <div class="job-item p-4 mb-4">
                                     <div class="row g-4">
                                         <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                            <img class="flex-shrink-0 img-fluid border rounded" src="images/pcaarrd.png" alt="" style="width: 80px; height: 80px;">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/pcaarrd.png" alt="" style="width: 80px; height: 80px;">
                                             <div class="text-start ps-4">
                                                 <h5 class="mb-3">Philippine Council for Agriculture, Aquatic and Natural Resources Research and Development </h5>
                                                 <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>DOST-PCAARRD, Jamboree Road 
@@ -195,7 +195,7 @@
                                 <div class="job-item p-4 mb-4">
                                     <div class="row g-4">
                                         <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                            <img class="flex-shrink-0 img-fluid border rounded" src="images/logo-dost.png" alt="" style="width: 80px; height: 80px;">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/fprdi.jpg" alt="" style="width: 80px; height: 80px;">
                                             <div class="text-start ps-4">
                                                 <h5 class="mb-3">Forest Products Research and Development Institute</h5>
                                                 <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>DOST-FPRDI, Narra Rd., Forestry Campus, 
@@ -214,7 +214,7 @@
                                 <div class="job-item p-4 mb-4">
                                     <div class="row g-4">
                                         <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                            <img class="flex-shrink-0 img-fluid border rounded" src="images/logo-dost.png" alt="" style="width: 80px; height: 80px;">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/pnri.jpg" alt="" style="width: 80px; height: 80px;">
                                             <div class="text-start ps-4">
                                                 <h5 class="mb-3">Philippine Nuclear Research Institute</h5>
                                                 <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>DOST-PNRI, Commonwealth Avenue, Diliman, Quezon City</span><br>
@@ -231,7 +231,7 @@
                                 <div class="job-item p-4 mb-4">
                                     <div class="row g-4">
                                         <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                            <img class="flex-shrink-0 img-fluid border rounded" src="images/logo-dost.png" alt="" style="width: 80px; height: 80px;">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/pagasa.png" alt="" style="width: 80px; height: 80px;">
                                             <div class="text-start ps-4">
                                                 <h5 class="mb-3">Philippine Atmospheric, Geophysical and Astronomical Services Administration</h5>
                                                 <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>PAGASA Science Garden Complex, BIR Road, 
@@ -249,7 +249,7 @@
                                 <div class="job-item p-4 mb-4">
                                     <div class="row g-4">
                                         <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                            <img class="flex-shrink-0 img-fluid border rounded" src="images/logo-dost.png" alt="" style="width: 80px; height: 80px;">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/philvocs.jpg" alt="" style="width: 80px; height: 80px;">
                                             <div class="text-start ps-4">
                                                 <h5 class="mb-3">Philippine Institute of Volcanology and Seismology</h5>
                                                 <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>PHIVOLCS Building, C.P Garcia Ave., Diliman, Quezon City</span><br>
@@ -266,7 +266,7 @@
                                 <div class="job-item p-4 mb-4">
                                     <div class="row g-4">
                                         <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                            <img class="flex-shrink-0 img-fluid border rounded" src="images/pshs.png" alt="" style="width: 80px; height: 80px;">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/pshs.png" alt="" style="width: 80px; height: 80px;">
                                             <div class="text-start ps-4">
                                                 <h5 class="mb-3">Philippine Science Highschool System</h5>
                                                 <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>DOST-Philipine Science High School, Agham Road, Diliman, Quezon City</span><br>
@@ -283,7 +283,7 @@
                                 <div class="job-item p-4 mb-4">
                                     <div class="row g-4">
                                         <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                            <img class="flex-shrink-0 img-fluid border rounded" src="images/nrcp.png" alt="" style="width: 80px; height: 80px;">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/nrcp.png" alt="" style="width: 80px; height: 80px;">
                                             <div class="text-start ps-4">
                                                 <h5 class="mb-3">National Research Council of the Philippines</h5>
                                                 <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>NRCP, Department of Science and Technology (DOST)
@@ -302,7 +302,7 @@
                                 <div class="job-item p-4 mb-4">
                                     <div class="row g-4">
                                         <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                            <img class="flex-shrink-0 img-fluid border rounded" src="images/mirdc.png" alt="" style="width: 80px; height: 80px;">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/mirdc.png" alt="" style="width: 80px; height: 80px;">
                                             <div class="text-start ps-4">
                                                 <h5 class="mb-3">Metals Industry Research and Development Center</h5>
                                                 <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>Metals Industry Research and Development Center, 
@@ -320,7 +320,7 @@
                                 <div class="job-item p-4 mb-4">
                                     <div class="row g-4">
                                         <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                            <img class="flex-shrink-0 img-fluid border rounded" src="images/ptri.png" alt="" style="width: 80px; height: 80px;">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/ptri.png" alt="" style="width: 80px; height: 80px;">
                                             <div class="text-start ps-4">
                                                 <h5 class="mb-3">Philippine Textile Research Institute</h5>
                                                 <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>DOST-PTRI Building, Gen. Santos Avenue, Bicutan, Taguig City</span><br>
