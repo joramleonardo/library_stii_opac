@@ -349,12 +349,20 @@
                                                         <div class="col-sm-12 col-md-8 d-flex align-items-center">
                                                             <img class="flex-shrink-0 img-fluid border rounded" src="images/article.png" alt="" style="width: 40px; height: 40px;"/>
                                                             <div class="text-start ps-4">
-                                                                <span v-if="event.Title === ''">
+                                                                <!-- <span v-if="event.Title === ''">
                                                                     <h5 class="mb-3" v-html="event.JournalTitle"></h5>
                                                                 </span>
                                                                 <span v-else>
                                                                     <h5 class="mb-3" v-html="event.Title"></h5>
-                                                                </span>
+                                                                </span> -->
+                                                                
+                                                                    <h5 class="mb-0" v-html="event.Title"></h5>
+                                                                    <br>
+                                                                    <span style="font-style: italic"> 
+                                                                        Journal Title: <span class="mb-3" v-html="event.JournalTitle"></span>
+                                                                    </span>
+                                                                    <br>
+
                                                                 <b-badge  variant="" style="background-color: #B8860B !important">ARTICLES</b-badge>
                                                                 <small>
                                                                     <br>
@@ -536,22 +544,30 @@
                         
                     </div>
                 </b-form-group>
-                <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Title:" label-class="font-weight-bold pt-0" class="ticket_details-font">
-                        <!-- <h5 class="mb-3" v-html="quickView_Details.Title"></h5> -->
-                        <span v-if="quickView_Details.Title === ''">
+                <!-- <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Title:" label-class="font-weight-bold pt-0" class="ticket_details-font">
+                        <h5 class="mb-3" v-html="quickView_Details.Title"></h5><br>
+                </b-form-group> -->
+                 <span v-if="quickView_Details.MaterialType === 'ANALYTICS'">
+                    <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Title:" label-class="font-weight-bold pt-0" class="ticket_details-font">
+                            <h5 class="mb-3" v-html="quickView_Details.Title"></h5><br>
+                    </b-form-group>
+                    <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Journal Title:" label-class="font-weight-bold pt-0" class="ticket_details-font">
                             <h5 class="mb-3" v-html="quickView_Details.JournalTitle"></h5>
-                        </span>
-                        <span v-else>
-                            <h5 class="mb-3" v-html="quickView_Details.Title"></h5>
-                        </span>
-                </b-form-group>
+                    </b-form-group>
+                 </span>
+                 <span v-else>
+                    <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Title:" label-class="font-weight-bold pt-0" class="ticket_details-font">
+                            <h5 class="mb-3" v-html="quickView_Details.Title"></h5><br>
+                    </b-form-group>
+                 </span>
                 <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Location:" label-class="font-weight-bold pt-0" class="ticket_details-font">
-                        <span v-if="quickView_Details.agency_source === ''">
+                        <!-- <span v-if="quickView_Details.AgencyCode === ''">
                             -
                         </span>
                         <span v-else>
-                            {{quickView_Details.agency_source}}
-                        </span>
+                            {{quickView_Details.AgencyCode}}
+                        </span> -->
+                        {{quickView_Details.AgencyCode}}
                 </b-form-group>
                 <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Author:" label-class="font-weight-bold pt-0" class="ticket_details-font">
                         <span v-if="quickView_Details.Author === '' || quickView_Details.Author == NULL">
