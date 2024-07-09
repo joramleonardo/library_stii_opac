@@ -95,7 +95,7 @@ const routes = [
                 component: Contact_Page
             },
             {
-                path: '/member',
+                path: '/member-agencies',
                 name: 'member',
                 component: MemberAgencies_Page
             },
