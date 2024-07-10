@@ -20,8 +20,8 @@ export default new Vuex.Store({
 
 // export default new Vuex.Store({
 //     state: {
-//         apiURL: 'https://scinet.science.ph/api',
-//         serverPath: 'https://scinet.science.ph'
+//         apiURL: 'http://scinet.dost.gov.ph/api',
+//         serverPath: 'http://scinet.dost.gov.ph'
 //     },
 //     mutations: {},
 //     actions: {}

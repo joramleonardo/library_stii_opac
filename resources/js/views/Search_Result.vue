@@ -68,9 +68,13 @@
                 </div>
             </div>
             <div class="mb-3" id="total_result" style="display: none" >
-                <span style="font-weight: bold"> <span style="font-style: italic; color: red"> {{totalRows}} </span> result(s) found.
-                <!-- for </span> <span style="font-weight: 900; font-color: red"> {{term}}  -->
-
+                <span style="font-weight: bold">
+                     <span style="font-style: italic; color: red"> {{totalRows}} </span> result(s) found.
+                </span>
+            </div>
+            <div class="mb-3" id="total_result2" style="display: none" >
+                <span style="font-weight: bold">
+                     <span style="font-style: italic; color: red"> {{totalRows2}} </span> result(s) found.
                 </span>
             </div>
         </div>
@@ -415,7 +419,7 @@
                                 </b-pagination>
                             </div>
                             <div style="display: none" id="_pagination2">
-                                <b-pagination :total-rows="totalRows" :per-page="perPage"  @change="searchFunction2" aria-controls="my-table">
+                                <b-pagination :total-rows="totalRows2" :per-page="perPage"  @change="searchFunction2" aria-controls="my-table">
 
                                 </b-pagination>
                             </div>
@@ -546,6 +550,7 @@
             perPage: 10,
             currentPage: 1,
             totalRows: 0,
+            totalRows2: 0,
             searchKeyword: '',
             keyword: this.$route.params.word,
             keyword_2: 'All',
@@ -853,198 +858,6 @@
                 document.getElementById("spinner_").style.display = "block";
 
                 
-                // try{
-                //     if(this.keyword === ""){
-                //         this.response0 = await ticket_service.loadHoldings_Type_All(this.$route.params.type, this.keyword_2, i, this.perPage);
-                       
-                //     }
-                //     else  if(this.keyword !== ""){
-                //         if (this.$route.params.type === "ALL"){
-
-                //             if (this.$route.params.filter === "All"){
-                //                 this.response0 = await ticket_service.loadHoldings_All_keyword(this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "Title"){
-                //                 this.response0 = await ticket_service.loadHoldings_Title_keyword(this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "Author"){
-                //                 this.response0 = await ticket_service.loadHoldings_Author_keyword(this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "Subject"){
-                //                 this.response0 = await ticket_service.loadHoldings_Subject_keyword(this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "CallNum"){
-                //                 this.response0 = await ticket_service.loadHoldings_CallNum_keyword(this.keyword, i, this.perPage);
-                //             }
-                //         }
-                //         else if (this.$route.params.type === "ANALYTICS"){
-                //             if (this.$route.params.filter === "All"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_All_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "Title"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_Title_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "Author"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_Author_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "Subject"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_Subject_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "CallNum"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_CallNum_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //         }
-                //         else if (this.$route.params.type === "BOOKS"){
-                //             if (this.$route.params.filter === "All"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_All_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "Title"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_Title_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "Author"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_Author_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "Subject"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_Subject_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "CallNum"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_CallNum_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //         }
-                //         else if (this.$route.params.type === "PROJECTS"){
-                //             if (this.$route.params.filter === "All"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_All_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "Title"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_Title_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "Author"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_Author_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "Subject"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_Subject_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "CallNum"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_CallNum_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //         }
-                //         else if (this.$route.params.type === "NONPRINTS"){
-
-                //             if (this.$route.params.filter === "All"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_All_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "Title"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_Title_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "Author"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_Author_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "Subject"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_Subject_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "CallNum"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_CallNum_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //         }
-                //         else if (this.$route.params.type === "REPRINTS"){
-                //             if (this.$route.params.filter === "All"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_All_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "Title"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_Title_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "Author"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_Author_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "Subject"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_Subject_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "CallNum"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_CallNum_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //         }
-                //         else if (this.$route.params.type === "SERIALS"){
-                //             if (this.$route.params.filter === "All"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_All_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "Title"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_Title_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "Author"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_Author_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "Subject"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_Subject_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "CallNum"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_CallNum_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //         }
-                //         else if (this.$route.params.type === "REPORTS"){
-
-                //             if (this.$route.params.filter === "All"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_All_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "Title"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_Title_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "Author"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_Author_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "Subject"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_Subject_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "CallNum"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_CallNum_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //         }
-                //         else if (this.$route.params.type === "THESES"){
-                //             if (this.$route.params.filter === "All"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_All_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "Title"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_Title_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "Author"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_Author_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "Subject"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_Subject_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "CallNum"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_CallNum_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //         }
-                //         else if (this.$route.params.type === "VF"){
-                //             if (this.$route.params.filter === "All"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_All_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "Title"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_Title_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "Author"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_Author_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "Subject"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_Subject_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //             else if (this.$route.params.filter === "CallNum"){
-                //                 this.response0 = await ticket_service.loadHoldings_Type_CallNum_keyword(this.$route.params.type, this.keyword, i, this.perPage);
-                //             }
-                //         }
-                //     }
-
-                    
-
-                //     this.ticket1 = this.response0.data.data;
-                //     this.totalRows = this.response0.data.total;
-
-                //     document.getElementById("spinner_").style.display = "none";
-                //     document.getElementById("_results").style.display = "block"; 
-                //     document.getElementById("total_result").style.display = "block";
-                //     document.getElementById("_pagination").style.display = "block"; 
-                
-                // }
                 
                 try{
                     if(this.searchKeyword === ""){
@@ -1230,12 +1043,12 @@
                     this.ticket1 = this.response0.data.data;
                     console.log("HELLO");
                     console.log(this.ticket1.Title);
-                    this.totalRows = this.response0.data.total;
+                    this.totalRows2 = this.response0.data.total;
 
                     document.getElementById("spinner_").style.display = "none";
                     document.getElementById("_results").style.display = "block"; 
-                    document.getElementById("total_result").style.display = "block";
-                    document.getElementById("_pagination").style.display = "block"; 
+                    document.getElementById("total_result2").style.display = "block";
+                    document.getElementById("_pagination2").style.display = "block"; 
                 
                 }
                 catch (error){
