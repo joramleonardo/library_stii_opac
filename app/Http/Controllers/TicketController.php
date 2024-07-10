@@ -20,9 +20,6 @@ class TicketController extends Controller
 
     public function quickView(Request $request, $id){
         $data = DB::table('tblHoldings')
-                // ->join('tblHoldingsAuthorName', 'tblHoldings.HoldingsID','=', 'tblHoldingsAuthorName.HoldingsID')
-                // ->join('tblHoldingsSubject', 'tblHoldings.HoldingsID','=', 'tblHoldingsSubject.HoldingsID')
-                // ->join('tblHoldingsPublisherName', 'tblHoldings.HoldingsID','=', 'tblHoldingsPublisherName.HoldingsID')
                 ->where('tblHoldings.HoldingsID', $id)
                 ->get('*');
 
@@ -33,9 +30,6 @@ class TicketController extends Controller
 
     public function loadHoldings_All(Request $a, $keyword){
         $data = DB::table('tblHoldings')
-                    // ->join('tblHoldingsSubject', 'tblHoldings.HoldingsID','=', 'tblHoldingsSubject.HoldingsID')
-                    // ->join('tblHoldingsAuthorName', 'tblHoldings.HoldingsID','=', 'tblHoldingsAuthorName.HoldingsID')
-                    // ->join('tblHoldingsPublisherName', 'tblHoldings.HoldingsID','=', 'tblHoldingsPublisherName.HoldingsID')
                     ->where('tblHoldings.Title', 'LIKE', "%$keyword%")
                     ->orWhere('tblHoldings.Title2', 'LIKE', "%$keyword%")
                     ->orWhere('tblHoldings.CallNum', 'LIKE', "%$keyword%")
@@ -43,20 +37,6 @@ class TicketController extends Controller
                     ->orWhere('tblHoldings.JournalTitle', 'LIKE', "%$keyword%")
                     ->orWhere('tblHoldings.Author', 'LIKE', "%$keyword%")
                     ->orWhere('tblHoldings.Subject', 'LIKE', "%$keyword%")
-
-                    // ->orWhere('tblHoldingsSubject.SubjectHeadings', 'LIKE', "%$keyword%")
-                    // ->orWhere('tblHoldingsSubject.FormSubdivision', 'LIKE', "%$keyword%")
-                    // ->orWhere('tblHoldingsSubject.SubjectSubdivision', 'LIKE', "%$keyword%")
-                    // ->orWhere('tblHoldingsSubject.SubjectChronology', 'LIKE', "%$keyword%")
-                    // ->orWhere('tblHoldingsSubject.HeadingGeography', 'LIKE', "%$keyword%")
-
-                    // ->orWhere('tblHoldingsAuthorName.AuthorName', 'LIKE', "%$keyword%")
-                    // ->orWhere('tblHoldingsAuthorName.CorporateAuthor', 'LIKE', "%$keyword%")
-
-                    // ->orWhere('tblHoldingsPublisherName.PublisherName', 'LIKE', "%$keyword%")
-                    // ->orWhere('tblHoldingsPublisherName.PublicationPlace', 'LIKE', "%$keyword%")
-                    // ->orWhere('tblHoldingsPublisherName.PublicationDate', 'LIKE', "%$keyword%")
-
                     ->orderBy('tblHoldings.Title')
                     ->groupBy('tblHoldings.HoldingsID')
                     ->paginate($a->perpage);
@@ -65,8 +45,6 @@ class TicketController extends Controller
 
     public function loadHoldings_Title(Request $a, $keyword){
         $data = DB::table('tblHoldings')
-                    // ->where('tblHoldings.Title', 'LIKE', "%$keyword%")
-                    // ->orWhere('tblHoldings.Title2', 'LIKE', "%$keyword%")
                     ->orderBy('tblHoldings.Title')
                     ->groupBy('tblHoldings.HoldingsID')
                     ->paginate($a->perpage);
@@ -76,26 +54,13 @@ class TicketController extends Controller
     public function loadHoldings_Author(Request $a, $keyword){
         $data = DB::table('tblHoldings')
                     ->join('tblHoldingsAuthorName', 'tblHoldings.HoldingsID','=', 'tblHoldingsAuthorName.HoldingsID')
-                    // ->where('tblHoldingsAuthorName.AuthorName', 'LIKE', "%$keyword%")
-                    // ->orWhere('tblHoldingsAuthorName.CorporateAuthor', 'LIKE', "%$keyword%")
                     ->groupBy('tblHoldings.HoldingsID')
                     ->paginate($a->perpage);
         return response()->json($data, 200);
     }
 
     public function loadHoldings_Subject(Request $a, $keyword){
-        // $data = DB::table('tblHoldings')
-        //             ->join('tblHoldingsSubject', 'tblHoldings.HoldingsID','=', 'tblHoldingsSubject.HoldingsID')
-        //             ->where('tblHoldingsSubject.SubjectHeadings', 'LIKE', "%$keyword%")
-        //             ->orWhere('tblHoldingsSubject.FormSubdivision', 'LIKE', "%$keyword%")
-        //             ->orWhere('tblHoldingsSubject.SubjectSubdivision', 'LIKE', "%$keyword%")
-        //             ->orWhere('tblHoldingsSubject.SubjectChronology', 'LIKE', "%$keyword%")
-        //             ->orWhere('tblHoldingsSubject.HeadingGeography', 'LIKE', "%$keyword%")
-        //             ->orderBy('tblHoldings.Title')
-        //             ->groupBy('tblHoldings.HoldingsID')
-        //             ->paginate($a->perpage);
             $data = DB::table('tblHoldings')
-                        // ->where('tblHoldings.Subject', 'LIKE', "%$keyword%")
                         ->orderBy('tblHoldings.Title')
                         ->groupBy('tblHoldings.HoldingsID')
                         ->paginate($a->perpage);
@@ -104,7 +69,6 @@ class TicketController extends Controller
 
     public function loadHoldings_CallNum(Request $a, $keyword){
         $data = DB::table('tblHoldings')
-                    // ->where('tblHoldings.CallNum', 'LIKE', "%$keyword%")
                     ->orderBy('tblHoldings.Title')
                     ->groupBy('tblHoldings.HoldingsID')
                     ->paginate($a->perpage);
@@ -113,11 +77,8 @@ class TicketController extends Controller
 
     public function loadHoldings_Type_All(Request $a, $materialType, $keyword){
         $data = DB::table('tblHoldings')
+                    ->where('tblHoldings.Title','!=', '')
                     ->where('tblHoldings.MaterialType', $materialType)
-                    // ->where('tblHoldings.Title', 'LIKE', "%$keyword%")
-                    // ->orWhere('tblHoldingsAuthorName.AuthorName', 'LIKE', "%$keyword%")
-                    // ->orWhere('tblHoldingsSubject.SubjectHeadings', 'LIKE', "%$keyword%")
-                    // ->orWhere('tblHoldings.CallNum', 'LIKE', "%$keyword%")
                     ->orderBy('tblHoldings.Title')
                     ->groupBy('tblHoldings.HoldingsID')
                     ->paginate($a->perpage);
@@ -127,7 +88,6 @@ class TicketController extends Controller
     public function loadHoldings_Type_Title(Request $a, $materialType, $keyword){
         $data = DB::table('tblHoldings')
                     ->where('tblHoldings.MaterialType', $materialType)
-                    // ->where('tblHoldings.Title', 'LIKE', "%$keyword%")
                     ->orderBy('tblHoldings.Title')
                     ->groupBy('tblHoldings.HoldingsID')
                     ->paginate($a->perpage);
@@ -137,7 +97,6 @@ class TicketController extends Controller
     public function loadHoldings_Type_Author(Request $a, $materialType, $keyword){
         $data = DB::table('tblHoldings')
                     ->where('tblHoldings.MaterialType', $materialType)
-                    // ->where('tblHoldings.Author', 'LIKE', "%$keyword%")
                     ->orderBy('tblHoldings.Title')
                     ->groupBy('tblHoldings.HoldingsID')
                     ->paginate($a->perpage);
@@ -147,7 +106,6 @@ class TicketController extends Controller
     public function loadHoldings_Type_Subject(Request $a, $materialType, $keyword){
         $data = DB::table('tblHoldings')
                     ->where('tblHoldings.MaterialType', $materialType)
-                    // ->where('tblHoldings.Subject', 'LIKE', "%$keyword%")
                     ->orderBy('tblHoldings.Title')
                     ->groupBy('tblHoldings.HoldingsID')
                     ->paginate($a->perpage);
@@ -157,7 +115,6 @@ class TicketController extends Controller
     public function loadHoldings_Type_CallNum(Request $a, $materialType, $keyword){
         $data = DB::table('tblHoldings')
                     ->where('tblHoldings.MaterialType', $materialType)
-                    // ->where('tblHoldings.CallNum', 'LIKE', "%$keyword%")
                     ->orderBy('tblHoldings.Title')
                     ->groupBy('tblHoldings.HoldingsID')
                     ->paginate($a->perpage);
@@ -168,9 +125,7 @@ class TicketController extends Controller
 
     public function loadHoldings_All_keyword(Request $a, $keyword){
         $data = DB::table('tblHoldings')
-                    // ->join('tblHoldingsSubject', 'tblHoldings.HoldingsID','=', 'tblHoldingsSubject.HoldingsID')
-                    // ->join('tblHoldingsAuthorName', 'tblHoldings.HoldingsID','=', 'tblHoldingsAuthorName.HoldingsID')
-                    // ->join('tblHoldingsPublisherName', 'tblHoldings.HoldingsID','=', 'tblHoldingsPublisherName.HoldingsID')
+                    ->where('tblHoldings.Title','!=', '')
                     ->where('tblHoldings.Title', 'LIKE', "%$keyword%")
                     ->orWhere('tblHoldings.Title2', 'LIKE', "%$keyword%")
                     ->orWhere('tblHoldings.CallNum', 'LIKE', "%$keyword%")
@@ -178,20 +133,6 @@ class TicketController extends Controller
                     ->orWhere('tblHoldings.JournalTitle', 'LIKE', "%$keyword%")
                     ->orWhere('tblHoldings.Author', 'LIKE', "%$keyword%")
                     ->orWhere('tblHoldings.Subject', 'LIKE', "%$keyword%")
-
-                    // ->orWhere('tblHoldingsSubject.SubjectHeadings', 'LIKE', "%$keyword%")
-                    // ->orWhere('tblHoldingsSubject.FormSubdivision', 'LIKE', "%$keyword%")
-                    // ->orWhere('tblHoldingsSubject.SubjectSubdivision', 'LIKE', "%$keyword%")
-                    // ->orWhere('tblHoldingsSubject.SubjectChronology', 'LIKE', "%$keyword%")
-                    // ->orWhere('tblHoldingsSubject.HeadingGeography', 'LIKE', "%$keyword%")
-
-                    // ->orWhere('tblHoldingsAuthorName.AuthorName', 'LIKE', "%$keyword%")
-                    // ->orWhere('tblHoldingsAuthorName.CorporateAuthor', 'LIKE', "%$keyword%")
-
-                    // ->orWhere('tblHoldingsPublisherName.PublisherName', 'LIKE', "%$keyword%")
-                    // ->orWhere('tblHoldingsPublisherName.PublicationPlace', 'LIKE', "%$keyword%")
-                    // ->orWhere('tblHoldingsPublisherName.PublicationDate', 'LIKE', "%$keyword%")
-
                     ->orderBy('tblHoldings.Title')
                     ->groupBy('tblHoldings.HoldingsID')
                     ->paginate($a->perpage);
