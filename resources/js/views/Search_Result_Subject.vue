@@ -69,7 +69,7 @@
                     </div>
                 </div>
             </div> -->
-            <div class="container-xxl">
+            <!-- <div class="container-xxl">
                 <div id="spinner_">
                     <div class="text-center mt-5">
                         <b-spinner label="Busy"></b-spinner>
@@ -78,6 +78,34 @@
                 <div class="mb-3" id="total_result" style="display: none" >
                     <span style="font-weight: bold"> <span style="font-style: italic"> {{totalRows}} </span> result(s) found for Subject Category:</span> <span style="font-weight: 900; font-color: red"> {{subject}} </span>
                 </div>
+            </div> -->
+            <div class="container-xxl">
+                <div id="spinner_">
+                    <div class="text-center mt-5">
+                        <b-spinner label="Busy"></b-spinner>
+                    </div>
+                </div>
+                <div class="mb-3" id="total_result" style="display: none" >
+                    <span style="font-weight: bold">
+                        <span style="font-style: italic; color: red"> 
+                            {{totalRows}} 
+                        </span> result(s) found for Subject Category:
+                        <span style="font-weight: 900; font-color: red"> 
+                            {{subject}} 
+                        </span>
+                    </span>
+                    
+                </div>
+                <div class="mb-3" id="total_result2" style="display: none" >
+                    <span style="font-weight: bold">
+                        <span style="font-style: italic; color: red"> 
+                            {{totalRows2}} 
+                        </span> result(s) found for Subject Category:
+                        <span style="font-weight: 900; font-color: red"> 
+                            {{subject}} 
+                        </span>
+                    </span>
+                </div>
             </div>
 
             <div class="container-xxl">
@@ -85,252 +113,334 @@
                         <div class="col-lg-12">
                             <div class="container" id="_results">
                                 <div v-for="(event, index) in ticket1" :key="index" class="mb-3 wow fadeInUp" data-wow-delay="0.1s" id="my-table">
-                                    <div class="job-item p-4 mb-4 result_box">
-                                        <div class="row g-4" v-if="event.MaterialType === 'VF'">
-                                            <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                                <img class="flex-shrink-0 img-fluid border rounded" src="images/vertical.png" alt="" style="width: 40px; height: 40px;"/>
-                                                <div class="text-start ps-4">
-                                                    <!-- <h5 class="mb-3">{{event.Title}}</h5> -->
-                                                    <h5 class="mb-3" v-html="event.Title"></h5> 
-                                                    <b-badge variant="" style="background-color: #CD5C5C !important">VERTICAL FILES</b-badge>
-                                                    <small>
-                                                        <br>
-                                                    </small>
+                                <!-- <div class="job-item p-4 mb-4 result_box"> -->
+                                    <span v-if="event.MaterialType === 'VF'">
+                                        <div class="job-item p-4 mb-4 result_box">
+                                            <div class="row g-4">
+                                                <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                                    <img class="flex-shrink-0 img-fluid border rounded" src="images/vertical.png" alt="" style="width: 40px; height: 40px;"/>
+                                                    <div class="text-start ps-4">
+                                                        <h5 class="mb-3" v-html="event.Title"></h5>
+                                                        <b-badge variant="" style="background-color: #CD5C5C !important">VERTICAL FILES</b-badge>
+                                                        <small>
+                                                            <br>
+                                                        </small>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
-                                                <div class="d-flex mb-3">
-                                                    <b-button size="sm" class="btn btn-primary" style="margin-right: 10px" @click="quickView(event.HoldingsID)">
-                                                            Quick View
-                                                    </b-button>
-                                                    <b-button size="sm" class="btn btn-primary">
-                                                        <router-link v-bind:to="{name : 'result', params: { id: event.HoldingsID}}"  target="_blank">
-                                                            Full Catalog
-                                                        </router-link>
-                                                    </b-button> 
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row g-4" v-if="event.MaterialType === 'THESES'">
-                                            <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                                <img class="flex-shrink-0 img-fluid border rounded" src="images/thesis.png" alt="" style="width: 40px; height: 40px;"/>
-                                                <div class="text-start ps-4">
-                                                    <!-- <h5 class="mb-3">{{event.Title}}</h5> -->
-                                                    <h5 class="mb-3" v-html="event.Title"></h5> 
-                                                    <b-badge  variant="" style="background-color: #FF6347 !important">THESIS/DISSERTATIONS</b-badge>
-                                                    <small>
-                                                        <br>
-                                                    </small>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
-                                                <div class="d-flex mb-3">
-                                                    <b-button size="sm" class="btn btn-primary" style="margin-right: 10px" @click="quickView(event.HoldingsID)">
-                                                            Quick View
-                                                    </b-button>
-                                                    <b-button size="sm" class="btn btn-primary">
-                                                        <router-link v-bind:to="{name : 'result', params: { id: event.HoldingsID}}"  target="_blank">
-                                                            Full Catalog
-                                                        </router-link>
-                                                    </b-button> 
+                                                <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                                    <div class="d-flex mb-3">
+                                                        <b-button size="sm" class="btn btn-primary" style="margin-right: 10px" @click="quickView(event.HoldingsID)">
+                                                                Quick View
+                                                        </b-button>
+                                                        <b-button size="sm" class="btn btn-primary">
+                                                            <router-link v-bind:to="{name : 'result', params: { id: event.HoldingsID}}"  target="_blank">
+                                                                Full Catalog
+                                                            </router-link>
+                                                        </b-button> 
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row g-4" v-if="event.MaterialType === 'REPORTS'">
-                                            <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                                <img class="flex-shrink-0 img-fluid border rounded" src="images/tech-report.png" alt="" style="width: 40px; height: 40px;"/>
-                                                <div class="text-start ps-4">
-                                                    <!-- <h5 class="mb-3">{{event.Title}}</h5> -->
-                                                    <h5 class="mb-3" v-html="event.Title"></h5> 
-                                                    <b-badge  variant="" style="background-color: #BDB76B !important">TECHNICAL REPORTS</b-badge>
-                                                    <small>
-                                                        <br>
-                                                    </small>
+                                    </span>
+                                    <span v-if="event.MaterialType === 'THESES'">
+                                        <div class="job-item p-4 mb-4 result_box">
+                                            <div class="row g-4" >
+                                                <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                                    <img class="flex-shrink-0 img-fluid border rounded" src="images/thesis.png" alt="" style="width: 40px; height: 40px;"/>
+                                                    <div class="text-start ps-4">
+                                                        <!-- <h5 class="mb-3" v-html="event.Title"></h5> -->
+                                                        <h4 class="mb-3" v-html="event.Title"></h4> 
+                                                        <b-badge  variant="" style="background-color: #FF6347 !important">THESIS/DISSERTATIONS</b-badge>
+                                                        <small>
+                                                            <br>
+                                                        </small>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
-                                                <div class="d-flex mb-3">
-                                                    <b-button size="sm" class="btn btn-primary" style="margin-right: 10px" @click="quickView(event.HoldingsID)">
-                                                            Quick View
-                                                    </b-button>
-                                                    <b-button size="sm" class="btn btn-primary">
-                                                        <router-link v-bind:to="{name : 'result', params: { id: event.HoldingsID}}"  target="_blank">
-                                                            Full Catalog
-                                                        </router-link>
-                                                    </b-button> 
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row g-4" v-if="event.MaterialType === 'PROJECTS'">
-                                            <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                                <img class="flex-shrink-0 img-fluid border rounded" src="images/invproj.png" alt="" style="width: 40px; height: 40px;"/>
-                                                <div class="text-start ps-4">
-                                                    <!-- <h5 class="mb-3">{{event.Title}}</h5> -->
-                                                    <h5 class="mb-3" v-html="event.Title"></h5> 
-                                                    <b-badge  variant="" style="background-color: #663399 !important">INVESTIGATORY PROJECTS</b-badge>
-                                                    <small>
-                                                        <br>
-                                                    </small>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
-                                                <div class="d-flex mb-3">
-                                                    <b-button size="sm" class="btn btn-primary" style="margin-right: 10px" @click="quickView(event.HoldingsID)">
-                                                            Quick View
-                                                    </b-button>
-                                                    <b-button size="sm" class="btn btn-primary">
-                                                        <router-link v-bind:to="{name : 'result', params: { id: event.HoldingsID}}"  target="_blank">
-                                                            Full Catalog
-                                                        </router-link>
-                                                    </b-button> 
+                                                <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                                    <div class="d-flex mb-3">
+                                                        <b-button size="sm" class="btn btn-primary" style="margin-right: 10px" @click="quickView(event.HoldingsID)">
+                                                                Quick View
+                                                        </b-button>
+                                                        <b-button size="sm" class="btn btn-primary">
+                                                            <router-link v-bind:to="{name : 'result', params: { id: event.HoldingsID}}"  target="_blank">
+                                                                Full Catalog
+                                                            </router-link>
+                                                        </b-button> 
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row g-4" v-if="event.MaterialType === 'NONPRINTS'">
-                                            <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                                <img class="flex-shrink-0 img-fluid border rounded" src="images/nonprint.png" alt="" style="width: 40px; height: 40px;"/>
-                                                <div class="text-start ps-4">
-                                                    <!-- <h5 class="mb-3">{{event.Title}}</h5> -->
-                                                    <h5 class="mb-3" v-html="event.Title"></h5> 
-                                                    <b-badge  variant="" style="background-color: #808000 !important">NONPRINTS</b-badge>
-                                                    <small>
-                                                        <br>
-                                                    </small>
+                                    </span>
+                                    <span v-if="event.MaterialType === 'REPORTS'">
+                                        <div class="job-item p-4 mb-4 result_box">
+                                            <div class="row g-4">
+                                                <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                                    <img class="flex-shrink-0 img-fluid border rounded" src="images/tech-report.png" alt="" style="width: 40px; height: 40px;"/>
+                                                    <div class="text-start ps-4">
+                                                        <h5 class="mb-3" v-html="event.Title"></h5>
+                                                        <b-badge  variant="" style="background-color: #BDB76B !important">TECHNICAL REPORTS</b-badge>
+                                                        <small>
+                                                            <br>
+                                                        </small>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
-                                                <div class="d-flex mb-3">
-                                                    <b-button size="sm" class="btn btn-primary" style="margin-right: 10px" @click="quickView(event.HoldingsID)">
-                                                            Quick View
-                                                    </b-button>
-                                                    <b-button size="sm" class="btn btn-primary">
-                                                        <router-link v-bind:to="{name : 'result', params: { id: event.HoldingsID}}"  target="_blank">
-                                                            Full Catalog
-                                                        </router-link>
-                                                    </b-button> 
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row g-4" v-if="event.MaterialType === 'BOOKS'">
-                                            <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                                <img class="flex-shrink-0 img-fluid border rounded" src="images/book.png" alt="" style="width: 40px; height: 40px;"/>
-                                                <div class="text-start ps-4">
-                                                    <!-- <h5 class="mb-3">{{event.Title}}</h5> -->
-                                                    <h5 class="mb-3" v-html="event.Title"></h5> 
-                                                    <b-badge  variant="" style="background-color: #4682B4 !important">BOOKS</b-badge>
-                                                    <small>
-                                                        <br>
-                                                    </small>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
-                                                <div class="d-flex mb-3">
-                                                    <b-button size="sm" class="btn btn-primary" style="margin-right: 10px" @click="quickView(event.HoldingsID)">
-                                                            Quick View
-                                                    </b-button>
-                                                    <b-button size="sm" class="btn btn-primary">
-                                                        <router-link v-bind:to="{name : 'result', params: { id: event.HoldingsID}}"  target="_blank">
-                                                            Full Catalog
-                                                        </router-link>
-                                                    </b-button> 
+                                                <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                                    <div class="d-flex mb-3">
+                                                        <b-button size="sm" class="btn btn-primary" style="margin-right: 10px" @click="quickView(event.HoldingsID)">
+                                                                Quick View
+                                                        </b-button>
+                                                        <b-button size="sm" class="btn btn-primary">
+                                                            <router-link v-bind:to="{name : 'result', params: { id: event.HoldingsID}}"  target="_blank">
+                                                                Full Catalog
+                                                            </router-link>
+                                                        </b-button> 
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row g-4" v-if="event.MaterialType === 'ANALYTICS'">
-                                            <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                                <img class="flex-shrink-0 img-fluid border rounded" src="images/article.png" alt="" style="width: 40px; height: 40px;"/>
-                                                <div class="text-start ps-4">
-                                                    <!-- <h5 class="mb-3">{{event.Title}}</h5> -->
-                                                    <h5 class="mb-3" v-html="event.Title"></h5> 
-                                                    <b-badge  variant="" style="background-color: #B8860B !important">ARTICLES</b-badge>
-                                                    <small>
-                                                        <br>
-                                                    </small>
+                                    </span>
+                                    <span v-if="event.MaterialType === 'PROJECTS'">
+                                        <span v-if="event.Title != ''">
+                                            <div class="job-item p-4 mb-4 result_box">
+                                                <div class="row g-4">
+                                                    <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                                        <img class="flex-shrink-0 img-fluid border rounded" src="images/invproj.png" alt="" style="width: 40px; height: 40px;"/>
+                                                        <div class="text-start ps-4">
+                                                            <h5 class="mb-3" v-html="event.Title"></h5>
+                                                            <b-badge  variant="" style="background-color: #663399 !important">INVESTIGATORY PROJECTS</b-badge>
+                                                            <small>
+                                                                <br>
+                                                            </small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                                        <div class="d-flex mb-3">
+                                                            <b-button size="sm" class="btn btn-primary" style="margin-right: 10px" @click="quickView(event.HoldingsID)">
+                                                                    Quick View
+                                                            </b-button>
+                                                            <b-button size="sm" class="btn btn-primary">
+                                                                <router-link v-bind:to="{name : 'result', params: { id: event.HoldingsID}}"  target="_blank">
+                                                                    Full Catalog
+                                                                </router-link>
+                                                            </b-button> 
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
-                                                <div class="d-flex mb-3">
-                                                    <b-button size="sm" class="btn btn-primary" style="margin-right: 10px" @click="quickView(event.HoldingsID)">
-                                                            Quick View
-                                                    </b-button>
-                                                    <b-button size="sm" class="btn btn-primary">
-                                                        <router-link v-bind:to="{name : 'result', params: { id: event.HoldingsID}}"  target="_blank">
-                                                            Full Catalog
-                                                        </router-link>
-                                                    </b-button> 
+                                        </span>
+                                        <span v-else-if="event.Title === ''">
+                                            <div class="job-item p-4 mb-4 result_box" style="display:none">
+                                                <div class="row g-4">
+                                                    <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                                        <img class="flex-shrink-0 img-fluid border rounded" src="images/invproj.png" alt="" style="width: 40px; height: 40px;"/>
+                                                        <div class="text-start ps-4">
+                                                            <h5 class="mb-3" v-html="event.Title"></h5>
+                                                            <b-badge  variant="" style="background-color: #663399 !important">INVESTIGATORY PROJECTS</b-badge>
+                                                            <small>
+                                                                <br>
+                                                            </small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                                        <div class="d-flex mb-3">
+                                                            <b-button size="sm" class="btn btn-primary" style="margin-right: 10px" @click="quickView(event.HoldingsID)">
+                                                                    Quick View
+                                                            </b-button>
+                                                            <b-button size="sm" class="btn btn-primary">
+                                                                <router-link v-bind:to="{name : 'result', params: { id: event.HoldingsID}}"  target="_blank">
+                                                                    Full Catalog
+                                                                </router-link>
+                                                            </b-button> 
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row g-4" v-if="event.MaterialType === 'SERIALS'">
-                                            <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                                <img class="flex-shrink-0 img-fluid border rounded" src="images/serials.png" alt="" style="width: 40px; height: 40px;"/>
-                                                <div class="text-start ps-4">
-                                                    <!-- <h5 class="mb-3">{{event.Title}}</h5> -->
-                                                    <h5 class="mb-3" v-html="event.Title"></h5> 
-                                                    <b-badge  variant="" style="background-color: #5F9EA0 !important">SERIALS</b-badge>
+                                        </span>
+                                    </span>
+                                    <span v-if="event.MaterialType === 'NONPRINTS'">
+                                        <div class="job-item p-4 mb-4 result_box">
+                                            <div class="row g-4">
+                                                <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                                    <img class="flex-shrink-0 img-fluid border rounded" src="images/nonprint.png" alt="" style="width: 40px; height: 40px;"/>
+                                                    <div class="text-start ps-4">
+                                                        <h5 class="mb-3" v-html="event.Title"></h5>
+                                                        <b-badge  variant="" style="background-color: #808000 !important">NONPRINTS</b-badge>
+                                                        <small>
+                                                            <br>
+                                                        </small>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
-                                                <div class="d-flex mb-3">
-                                                    <b-button size="sm" class="btn btn-primary" style="margin-right: 10px" @click="quickView(event.HoldingsID)">
-                                                            Quick View
-                                                    </b-button>
-                                                    <b-button size="sm" class="btn btn-primary">
-                                                        <router-link v-bind:to="{name : 'result', params: { id: event.HoldingsID}}"  target="_blank">
-                                                            Full Catalog
-                                                        </router-link>
-                                                    </b-button> 
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row g-4" v-if="event.MaterialType === 'REPRINTS'">
-                                            <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                                <img class="flex-shrink-0 img-fluid border rounded" src="images/print.png" alt="" style="width: 40px; height: 40px;"/>
-                                                <div class="text-start ps-4">
-                                                    <!-- <h5 class="mb-3">{{event.Title}}</h5> -->
-                                                    <h5 class="mb-3" v-html="event.Title"></h5> 
-                                                    <b-badge  variant="" style="background-color: #3CB371 !important">REPRINTS</b-badge>
-                                                    <small>
-                                                    </small>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
-                                                <div class="d-flex mb-3">
-                                                    <b-button size="sm" class="btn btn-primary" style="margin-right: 10px" @click="quickView(event.HoldingsID)">
-                                                            Quick View
-                                                    </b-button>
-                                                    <b-button size="sm" class="btn btn-primary">
-                                                        <router-link v-bind:to="{name : 'result', params: { id: event.HoldingsID}}"  target="_blank">
-                                                            Full Catalog
-                                                        </router-link>
-                                                    </b-button> 
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row g-4" v-if="event.MaterialType === ''">
-                                            <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                                <img class="flex-shrink-0 img-fluid border rounded" src="images/article.png" alt="" style="width: 40px; height: 40px;"/>
-                                                <div class="text-start ps-4">
-                                                    <!-- <h5 class="mb-3">{{event.Title}}</h5> -->
-                                                    <h5 class="mb-3" v-html="event.Title"></h5> 
-                                                    <small>
-                                                    </small>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
-                                                <div class="d-flex mb-3">
-                                                    <b-button size="sm" class="btn btn-primary" style="margin-right: 10px" @click="quickView(event.HoldingsID)">
-                                                            Quick View
-                                                    </b-button>
-                                                    <b-button size="sm" class="btn btn-primary">
-                                                        <router-link v-bind:to="{name : 'result', params: { id: event.HoldingsID}}"  target="_blank">
-                                                            Full Catalog
-                                                        </router-link>
-                                                    </b-button> 
+                                                <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                                    <div class="d-flex mb-3">
+                                                        <b-button size="sm" class="btn btn-primary" style="margin-right: 10px" @click="quickView(event.HoldingsID)">
+                                                                Quick View
+                                                        </b-button>
+                                                        <b-button size="sm" class="btn btn-primary">
+                                                            <router-link v-bind:to="{name : 'result', params: { id: event.HoldingsID}}"  target="_blank">
+                                                                Full Catalog
+                                                            </router-link>
+                                                        </b-button> 
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </span>
+                                    <span v-if="event.MaterialType === 'BOOKS'">
+                                        <div class="job-item p-4 mb-4 result_box">
+                                            <div class="row g-4" >
+                                                <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                                    <img class="flex-shrink-0 img-fluid border rounded" src="images/book.png" alt="" style="width: 40px; height: 40px;"/>
+                                                    <div class="text-start ps-4">
+                                                        <!-- <span v-if="event.Title != ''">
+                                                            <h5 class="mb-3" v-html="event.Title"></h5>
+                                                        </span>
+                                                        <span v-else-if="event.Title === ''">
+                                                            <span v-if="event.SeriesTitle != ''">
+                                                                <h5 class="mb-3" v-html="event.SeriesTitle"></h5>
+                                                            </span>
+                                                            <span v-else-if="event.SeriesTitle === ''">
+                                                                <span v-if="event.JournalTitle != ''">
+                                                                    <h5 class="mb-3" v-html="event.JournalTitle"></h5>
+                                                                </span>
+                                                                <span v-else-if="event.JournalTitle === ''">
+                                                                    <h5 class="mb-3">No Title</h5>
+                                                                </span>
+                                                            </span>
+                                                        </span> -->
+                                                                <h5 class="mb-0" v-html="event.Title"></h5>
+                                                                <span style="font-style: italic"> 
+                                                                <span class="mb-3" v-html="event.SeriesTitle"></span>
+                                                                </span>
+                                                                <br>
+
+                                                        <b-badge  variant="" style="background-color: #4682B4 !important">BOOKS</b-badge>
+                                                        <small>
+                                                            <br>
+                                                        </small>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                                    <div class="d-flex mb-3">
+                                                        <b-button size="sm" class="btn btn-primary" style="margin-right: 10px" @click="quickView(event.HoldingsID)">
+                                                                Quick View
+                                                        </b-button>
+                                                        <b-button size="sm" class="btn btn-primary">
+                                                            <router-link v-bind:to="{name : 'result', params: { id: event.HoldingsID}}"  target="_blank">
+                                                                Full Catalog
+                                                            </router-link>
+                                                        </b-button> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </span>
+                                    <span v-if="event.MaterialType === 'ANALYTICS'">
+                                        <div class="job-item p-4 mb-4 result_box">
+                                            <div class="row g-4">
+                                                    <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                                        <img class="flex-shrink-0 img-fluid border rounded" src="images/article.png" alt="" style="width: 40px; height: 40px;"/>
+                                                        <div class="text-start ps-4">
+                                                                <h5 class="mb-0" v-html="event.Title"></h5>
+                                                                <span style="font-style: italic"> 
+                                                                <span class="mb-3" v-html="event.JournalTitle"></span>
+                                                                </span>
+                                                                <br>
+                                                            <b-badge  variant="" style="background-color: #B8860B !important">ARTICLES</b-badge>
+                                                            <small>
+                                                                <br>
+                                                            </small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                                        <div class="d-flex mb-3">
+                                                            <b-button size="sm" class="btn btn-primary" style="margin-right: 10px" @click="quickView(event.HoldingsID)">
+                                                                    Quick View
+                                                            </b-button>
+                                                            <b-button size="sm" class="btn btn-primary">
+                                                                <router-link v-bind:to="{name : 'result', params: { id: event.HoldingsID}}"  target="_blank">
+                                                                    Full Catalog
+                                                                </router-link>
+                                                            </b-button> 
+                                                        </div>
+                                                    </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </span>
+                                    <span v-if="event.MaterialType === 'SERIALS'">
+                                        <div class="job-item p-4 mb-4 result_box">
+                                            <div class="row g-4">
+                                                <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                                    <img class="flex-shrink-0 img-fluid border rounded" src="images/serials.png" alt="" style="width: 40px; height: 40px;"/>
+                                                    <div class="text-start ps-4">
+                                                        <h5 class="mb-3" v-html="event.Title"></h5>
+                                                        <b-badge  variant="" style="background-color: #5F9EA0 !important">SERIALS</b-badge>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                                    <div class="d-flex mb-3">
+                                                        <b-button size="sm" class="btn btn-primary" style="margin-right: 10px" @click="quickView(event.HoldingsID)">
+                                                                Quick View
+                                                        </b-button>
+                                                        <b-button size="sm" class="btn btn-primary">
+                                                            <router-link v-bind:to="{name : 'result', params: { id: event.HoldingsID}}"  target="_blank">
+                                                                Full Catalog
+                                                            </router-link>
+                                                        </b-button> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </span>
+                                    <span v-if="event.MaterialType === 'REPRINTS'">
+                                        <div class="job-item p-4 mb-4 result_box">
+                                            <div class="row g-4">
+                                                <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                                    <img class="flex-shrink-0 img-fluid border rounded" src="images/print.png" alt="" style="width: 40px; height: 40px;"/>
+                                                    <div class="text-start ps-4">
+                                                        <h5 class="mb-3" v-html="event.Title"></h5>
+                                                        <b-badge  variant="" style="background-color: #3CB371 !important">REPRINTS</b-badge>
+                                                        <small>
+                                                        </small>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                                    <div class="d-flex mb-3">
+                                                        <b-button size="sm" class="btn btn-primary" style="margin-right: 10px" @click="quickView(event.HoldingsID)">
+                                                                Quick View
+                                                        </b-button>
+                                                        <b-button size="sm" class="btn btn-primary">
+                                                            <router-link v-bind:to="{name : 'result', params: { id: event.HoldingsID}}"  target="_blank">
+                                                                Full Catalog
+                                                            </router-link>
+                                                        </b-button> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </span>
+                                    <span v-if="event.MaterialType === ''">
+                                        <div class="job-item p-4 mb-4 result_box">
+                                            <div class="row g-4" >
+                                                <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                                    <img class="flex-shrink-0 img-fluid border rounded" src="images/article.png" alt="" style="width: 40px; height: 40px;"/>
+                                                    <div class="text-start ps-4">
+                                                        <h5 class="mb-3" v-html="event.Title"></h5>
+                                                        <small>
+                                                        </small>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                                    <div class="d-flex mb-3">
+                                                        <b-button size="sm" class="btn btn-primary" style="margin-right: 10px" @click="quickView(event.HoldingsID)">
+                                                                Quick View
+                                                        </b-button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </span>
+                                <!-- </div> -->
                                 </div>
                                 <div style="display: none" id="_pagination">
                                     <b-pagination :total-rows="totalRows" :per-page="perPage"  @change="searchFunction" aria-controls="my-table">
@@ -342,74 +452,93 @@
             </div>
 
             <div class="container">
-                <b-modal id="showDetails_internal" ref="showDetails_internal" centered title="Details" size="lg" ok-only>
-                    <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Material Type:" label-class="font-weight-bold pt-0" class="ticket_details-font">
-                        <div v-if="quickView_Details.MaterialType === 'VF'">
-                            <b-badge variant="" style="background-color: #CD5C5C !important">VERTICAL FILES</b-badge>
-                        </div>
-                        <div v-if="quickView_Details.MaterialType === 'THESES'">
-                            <b-badge  variant="" style="background-color: #FF6347 !important">THESIS/DISSERTATIONS</b-badge>
-                        </div>
-                        <div v-if="quickView_Details.MaterialType === 'REPORTS'">
-                            <b-badge  variant="" style="background-color: #BDB76B !important">TECHNICAL REPORTS</b-badge>
-                        </div>
-                        <div v-if="quickView_Details.MaterialType === 'PROJECTS'">
-                            <b-badge  variant="" style="background-color: #663399 !important">INVESTIGATORY PROJECTS</b-badge>
-                        </div>
-                        <div v-if="quickView_Details.MaterialType === 'NONPRINTS'">
-                            <b-badge  variant="" style="background-color: #808000 !important">NONPRINTS</b-badge>
-                        </div>
-                        <div v-if="quickView_Details.MaterialType === 'BOOKS'">
-                            <b-badge  variant="" style="background-color: #4682B4 !important">BOOKS</b-badge>
-                        </div>
-                        <div v-if="quickView_Details.MaterialType === 'ANALYTICS'">
-                            <b-badge  variant="" style="background-color: #B8860B !important">ARTICLES</b-badge>
-                        </div>
-                        <div v-if="quickView_Details.MaterialType === 'SERIALS'">
-                            <b-badge  variant="" style="background-color: #5F9EA0 !important">SERIALS</b-badge>
-                        </div>
-                        <div v-if="quickView_Details.MaterialType === 'REPRINTS'">
-                            <b-badge  variant="" style="background-color: #3CB371 !important">REPRINTS</b-badge>
-                        </div>
-                        <div v-if="quickView_Details.MaterialType === ''">
-                            
-                        </div>
-                    </b-form-group>
-                    <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Title:" label-class="font-weight-bold pt-0" class="ticket_details-font">
-                        {{quickView_Details.Title}}
-                    </b-form-group>
-                    <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Location:" label-class="font-weight-bold pt-0" class="ticket_details-font">
-                        {{quickView_Details.agency_source}}
-                    </b-form-group>
-                    <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Author:" label-class="font-weight-bold pt-0" class="ticket_details-font">
-                        {{quickView_Details.Author}}
-                    </b-form-group>
-                    <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Call Number:" label-class="font-weight-bold pt-0" class="ticket_details-font">
-                        {{quickView_Details.CallNum}}
-                    </b-form-group>
-                    <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Pages:" label-class="font-weight-bold pt-0" class="ticket_details-font">
-                        {{quickView_Details.PhysicalExtension}}
-                    </b-form-group>
-                    <!-- <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Abstract:" label-class="font-weight-bold pt-0" class="ticket_details-font">
-                        {{quickView_Details.SummaryAbstracts}}
-                    </b-form-group> -->
-                    <!-- <b-row>
-                        <b-col>
-                            <b-form-group label-cols="4" label-cols-lg="4" label-for="input-default" label="Date of Request:" label-class="font-weight-bold pt-0" class="ticket_details-font">
-                                {{quickView_Details.Title}}
-                            </b-form-group>
-                        </b-col>
-                        <b-col>
-                            <b-form-group label-cols="4" label-cols-lg="4" label-for="input-default" label="Date Accomplished:" label-class="font-weight-bold pt-0" class="ticket_details-font">
-                                {{quickView_Details.Title}}
-                            </b-form-group>
-                        </b-col>
-                    </b-row> -->
-                </b-modal>
+                <span v-if="quickView_Details.MaterialType === ''">
+                    <b-modal id="showDetails_internal" ref="showDetails_internal" centered title="Details" size="lg" ok-only>
+                        <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Material Type:" label-class="font-weight-bold pt-0" class="ticket_details-font">
+                            <div v-if="quickView_Details.MaterialType === ''"></div>
+                        </b-form-group>
+                        <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Title:" label-class="font-weight-bold pt-0" class="ticket_details-font">
+                            {{quickView_Details.Title}}
+                        </b-form-group>
+                        <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Summary Abstracts:" label-class="font-weight-bold pt-0" class="ticket_details-font">
+                            {{quickView_Details.SummaryAbstracts}}
+                        </b-form-group>
+                        <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Location:" label-class="font-weight-bold pt-0" class="ticket_details-font">
+                            {{quickView_Details.AgencyCode}}
+                        </b-form-group>
+                        <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Author:" label-class="font-weight-bold pt-0" class="ticket_details-font">
+                            <span v-if="quickView_Details.Author === NULL">
+                                -
+                            </span>
+                            <span v-else>
+                                {{quickView_Details.Author}}
+                            </span>
+                        </b-form-group>
+                        <!-- <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Location:" label-class="font-weight-bold pt-0" class="ticket_details-font">
+                            {{quickView_Details.agency_source}}
+                        </b-form-group>
+                        <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Author:" label-class="font-weight-bold pt-0" class="ticket_details-font">
+                            {{quickView_Details.Author}}
+                        </b-form-group>
+                        <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Call Number:" label-class="font-weight-bold pt-0" class="ticket_details-font">
+                            {{quickView_Details.CallNum}}
+                        </b-form-group>
+                        <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Pages:" label-class="font-weight-bold pt-0" class="ticket_details-font">
+                            {{quickView_Details.PhysicalExtension}}
+                        </b-form-group> -->
+                    </b-modal>
+                </span>
+                
+                <span v-else>
+                    <b-modal id="showDetails_internal" ref="showDetails_internal" centered title="Details" size="lg" ok-only>
+                        <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Material Type:" label-class="font-weight-bold pt-0" class="ticket_details-font">
+                            <div v-if="quickView_Details.MaterialType === 'VF'">
+                                <b-badge variant="" style="background-color: #CD5C5C !important">VERTICAL FILES</b-badge>
+                            </div>
+                            <div v-if="quickView_Details.MaterialType === 'THESES'">
+                                <b-badge  variant="" style="background-color: #FF6347 !important">THESIS/DISSERTATIONS</b-badge>
+                            </div>
+                            <div v-if="quickView_Details.MaterialType === 'REPORTS'">
+                                <b-badge  variant="" style="background-color: #BDB76B !important">TECHNICAL REPORTS</b-badge>
+                            </div>
+                            <div v-if="quickView_Details.MaterialType === 'PROJECTS'">
+                                <b-badge  variant="" style="background-color: #663399 !important">INVESTIGATORY PROJECTS</b-badge>
+                            </div>
+                            <div v-if="quickView_Details.MaterialType === 'NONPRINTS'">
+                                <b-badge  variant="" style="background-color: #808000 !important">NONPRINTS</b-badge>
+                            </div>
+                            <div v-if="quickView_Details.MaterialType === 'BOOKS'">
+                                <b-badge  variant="" style="background-color: #4682B4 !important">BOOKS</b-badge>
+                            </div>
+                            <div v-if="quickView_Details.MaterialType === 'ANALYTICS'">
+                                <b-badge  variant="" style="background-color: #B8860B !important">ARTICLES</b-badge>
+                            </div>
+                            <div v-if="quickView_Details.MaterialType === 'SERIALS'">
+                                <b-badge  variant="" style="background-color: #5F9EA0 !important">SERIALS</b-badge>
+                            </div>
+                            <div v-if="quickView_Details.MaterialType === 'REPRINTS'">
+                                <b-badge  variant="" style="background-color: #3CB371 !important">REPRINTS</b-badge>
+                            </div>
+                        </b-form-group>
+                        <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Title:" label-class="font-weight-bold pt-0" class="ticket_details-font">
+                            {{quickView_Details.Title}}
+                        </b-form-group>
+                        <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Location:" label-class="font-weight-bold pt-0" class="ticket_details-font">
+                            {{quickView_Details.agency_source}}
+                        </b-form-group>
+                        <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Author:" label-class="font-weight-bold pt-0" class="ticket_details-font">
+                            {{quickView_Details.Author}}
+                        </b-form-group>
+                        <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Call Number:" label-class="font-weight-bold pt-0" class="ticket_details-font">
+                            {{quickView_Details.CallNum}}
+                        </b-form-group>
+                        <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Pages:" label-class="font-weight-bold pt-0" class="ticket_details-font">
+                            {{quickView_Details.PhysicalExtension}}
+                        </b-form-group>
+                    </b-modal>
+                </span>
             </div>
         </div>
-        <!-- BACK TO TOP -->
-        <!-- <a href="#" class="btn btn-primary  back-to-top float-right">Back to Top</a> -->
 
     </div>
 
