@@ -488,7 +488,7 @@
                         {{quickView_Details.AgencyCode}}
                 </b-form-group>
                 <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Author:" label-class="font-weight-bold pt-0" class="ticket_details-font">
-                        <span v-if="quickView_Details.Author === '' || quickView_Details.Author == NULL">
+                        <span v-if="quickView_Details.Author === ''">
                             -
                         </span>
                         <span v-else>
@@ -497,7 +497,7 @@
                     <!-- {{quickView_Details.Author}} -->
                 </b-form-group>
                 <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Call Number:" label-class="font-weight-bold pt-0" class="ticket_details-font">
-                        <span v-if="quickView_Details.CallNum === '' || quickView_Details.CallNum == NULL">
+                        <span v-if="quickView_Details.CallNum === ''">
                             -
                         </span>
                         <span v-else>
@@ -506,7 +506,8 @@
                     <!-- {{quickView_Details.CallNum}} -->
                 </b-form-group>
                 <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Pages:" label-class="font-weight-bold pt-0" class="ticket_details-font">
-                        <span v-if="quickView_Details.PhysicalExtension === '' || quickView_Details.PhysicalExtension === NULL">
+                        <!-- <span v-if="quickView_Details.PhysicalExtension === '' || quickView_Details.PhysicalExtension === NULL"> -->
+                        <span v-if="quickView_Details.PhysicalExtension === ''">
                             -
                         </span>
                         <span v-else>
@@ -831,15 +832,13 @@
                     }
 
                     this.ticket1 = this.response0.data.data;
-                    console.log(this.ticket1);
-                    console.log("HELLO");
-                    
                     this.totalRows = this.response0.data.total;
 
                     document.getElementById("spinner_").style.display = "none";
                     document.getElementById("_results").style.display = "block"; 
                     document.getElementById("total_result").style.display = "block";
                     document.getElementById("_pagination").style.display = "block"; 
+                    console.log("HELLO");
                 
                 }
                 catch (error){

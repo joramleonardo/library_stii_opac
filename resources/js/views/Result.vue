@@ -850,6 +850,27 @@ import * as ticket_service from '../services/ticket_service';
                         console.log("Has Title");
                         const response = await ticket_service.loadHoldingsDetails_Articles_HoldingsOnly(this.event_id);
                         this.ticket1 = response.data[0]; 
+                        const aa = this.ticket1.Title;
+                        const bb = {
+                                    '&lt;font size=&quot;3&quot;&gt;': '',
+                                    'b': '',
+                                    'c': ''
+                                    };
+                                            
+                        // const cc = aa.replace('&lt;font size=&quot;3&quot;&gt;','');                   
+                        const cc = aa.replace(/&lt;font size=&quot;3&quot;&gt;/g, '');                
+                        const dd = aa.replaceAll(/&lt;font size=&quot;3&quot;&gt;/g, '')
+                                    .replaceAll(/&lt;/g, '')
+                                    .replaceAll(/font&gt;/g, '')
+                                    .replaceAll('/', '')
+                                    .replaceAll('p>', '')
+                                    .replaceAll('<p>', '')
+                                    .replaceAll('</p>', '')
+                                    .replaceAll(/p&gt;/g, '')
+                                    .replaceAll(/&lt;/g, '')
+                                    .replaceAll('font face="Tahoma">', '')
+                                    .replaceAll('font>', '');
+                        this.ticket1.Title = dd;
                         console.log(this.ticket1);
                         console.log("abc")
                     }
