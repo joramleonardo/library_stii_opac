@@ -628,6 +628,29 @@
                     this.quickView_Details = response.data[0];
                 }
                 catch (error){}
+                console.log(this.quickView_Details.Title);
+
+                // const aa = this.quickView_Details.Title;
+                // const bb = {
+                //             '&lt;font size=&quot;3&quot;&gt;': '',
+                //             'b': '',
+                //             'c': ''
+                //             };
+                                               
+                // const cc = aa.replace(/&lt;font size=&quot;3&quot;&gt;/g, '');                
+                // const dd = aa.replaceAll(/&lt;font size=&quot;3&quot;&gt;/g, '')
+                //             .replaceAll(/&lt;/g, '')
+                //             .replaceAll(/font&gt;/g, '')
+                //             .replaceAll('/', '')
+                //             .replaceAll('p>', '')
+                //             .replaceAll('<p>', '')
+                //             .replaceAll('</p>', '')
+                //             .replaceAll(/p&gt;/g, '')
+                //             .replaceAll(/&lt;/g, '')
+                //             .replaceAll('font face="Tahoma">', '')
+                //             .replaceAll('font>', '');
+                // this.quickView_Details.Title = dd;
+
                 this.$refs['showDetails_internal'].show();
             },
             onSlideStart(slide) {

@@ -871,8 +871,6 @@ import * as ticket_service from '../services/ticket_service';
                                     .replaceAll('font face="Tahoma">', '')
                                     .replaceAll('font>', '');
                         this.ticket1.Title = dd;
-                        console.log(this.ticket1);
-                        console.log("abc")
                     }
 
                     const responsePublisher = await ticket_service.ifHas_Publisher(this.event_id);
@@ -1005,26 +1003,6 @@ import * as ticket_service from '../services/ticket_service';
             document.getElementById("union-catalog").style.display = "none"; 
             console.log("aa");
             console.log(this.searchKeyword);
-            // console.log(i);
-            // let keyword = this.searchKeyword;
-            // this._keyword = this.searchKeyword;
-            // console.log("Keyword: " + this._keyword);
-            // let keywordString = keyword.toString();
-            // try{
-            //     const response = await ticket_service.loadHoldings_keyword(keyword, i, this.perPage);
-            //     //console.log(currentPage);
-
-            //     // console.log(response);
-            //     this.ticket1 = response.data.data;
-            //     this.totalRows = response.data.total;
-            //     document.getElementById("spinner_").style.display = "none";
-            //     document.getElementById("total_result").style.display = "block";
-            //     document.getElementById("_pagination").style.display = "block"; 
-            
-            // }
-            // catch (error){
-                
-            // }
         },
         viewTicketDetails: async function(data) {
             this.$refs['showReferenceCode'].show();

@@ -311,7 +311,10 @@
                                                     <div class="col-sm-12 col-md-8 d-flex align-items-center">
                                                         <img class="flex-shrink-0 img-fluid border rounded" src="images/article.png" alt="" style="width: 40px; height: 40px;"/>
                                                         <div class="text-start ps-4">
-                                                                <h5 class="mb-0" v-html="event.Title"></h5>
+                                                                <!-- <h5 class="mb-0" v-html="event.Title"></h5> -->
+                                                                <h5 class="mb-0">
+                                                                    {{event.Title}}
+                                                                </h5>
                                                                 <span style="font-style: italic"> 
                                                                 <span class="mb-3" v-html="event.JournalTitle"></span>
                                                                 </span>
@@ -467,7 +470,10 @@
                 </b-form-group> -->
                  <span v-if="quickView_Details.MaterialType === 'ANALYTICS'">
                     <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Title:" label-class="font-weight-bold pt-0" class="ticket_details-font">
-                            <h5 class="mb-3" v-html="quickView_Details.Title"></h5><br>
+                            <!-- <h5 class="mb-3" v-html="quickView_Details.Title"></h5><br> -->
+                            <h5 class="mb-3">
+                                {{quickView_Details.Title}}
+                            </h5>
                     </b-form-group>
                     <b-form-group label-cols="4" label-cols-lg="2" label-for="input-default" label="Journal Title:" label-class="font-weight-bold pt-0" class="ticket_details-font">
                             <h5 class="mb-3" v-html="quickView_Details.JournalTitle"></h5>
@@ -635,6 +641,30 @@
                     this.quickView_MultimediaDetails = response2.data[0];
                 }
                 catch (error){}
+                // console.log(this.quickView_Details.Title);
+
+                const aa = this.quickView_Details.Title;
+                const bb = {
+                            '&lt;font size=&quot;3&quot;&gt;': '',
+                            'b': '',
+                            'c': ''
+                            };
+                                    
+                // const cc = aa.replace('&lt;font size=&quot;3&quot;&gt;','');                   
+                const cc = aa.replace(/&lt;font size=&quot;3&quot;&gt;/g, '');                
+                const dd = aa.replaceAll(/&lt;font size=&quot;3&quot;&gt;/g, '')
+                            .replaceAll(/&lt;/g, '')
+                            .replaceAll(/font&gt;/g, '')
+                            .replaceAll('/', '')
+                            .replaceAll('p>', '')
+                            .replaceAll('<p>', '')
+                            .replaceAll('</p>', '')
+                            .replaceAll(/p&gt;/g, '')
+                            .replaceAll(/&lt;/g, '')
+                            .replaceAll('font face="Tahoma">', '')
+                            .replaceAll('font>', '');
+                this.quickView_Details.Title = dd;
+
                 this.$refs['showDetails_internal'].show();
             },
             onSlideStart(slide) {
@@ -653,6 +683,7 @@
                 try{
                     if(this.keyword === ""){
                         this.response0 = await ticket_service.loadHoldings_Type_All(this.$route.params.type, this.keyword_2, i, this.perPage);
+                        
                        
                     }
                     else  if(this.keyword !== ""){
@@ -829,9 +860,61 @@
                                 this.response0 = await ticket_service.loadHoldings_Type_CallNum_keyword(this.$route.params.type, this.keyword, i, this.perPage);
                             }
                         }
+
+                        
+
                     }
 
                     this.ticket1 = this.response0.data.data;
+                    const abc = this.ticket1;
+                        
+                        for (i = 0; i < abc.length; i++ ){
+                            const aa = abc[i]['Title'];
+                            const bb = {
+                                        '&lt;font size=&quot;3&quot;&gt;': '',
+                                        'b': '',
+                                        'c': ''
+                                        };
+                                                
+                            // const cc = aa.replace('&lt;font size=&quot;3&quot;&gt;','');                   
+                            const cc = aa.replace(/&lt;font size=&quot;3&quot;&gt;/g, '');                
+                            const dd = aa.replaceAll(/&lt;font size=&quot;3&quot;&gt;/g, '')
+                                        .replaceAll(/&lt;/g, '')
+                                        .replaceAll(/font&gt;/g, '')
+                                        .replaceAll('/', '')
+                                        .replaceAll('p>', '')
+                                        .replaceAll('<p>', '')
+                                        .replaceAll('</p>', '')
+                                        .replaceAll(/p&gt;/g, '')
+                                        .replaceAll(/&lt;/g, '')
+                                        .replaceAll('font face="Tahoma">', '')
+                                        .replaceAll('font>', '')
+                                        .replaceAll('&nbsp;', '')
+                                        .replaceAll('&quot;', '"')
+                                        .replaceAll('<i>', '')
+                                        .replaceAll('<u>', '')
+                                        .replaceAll('<', '')
+                                        .replaceAll('>', '')
+                                        .replaceAll('emstrong', '')
+                                        .replaceAll('em', '')
+                                        .replaceAll('div', '')
+                                        .replaceAll('strong', '')
+                                        .replaceAll('font size="2"', '')
+                                        .replaceAll('font size="4"', '')
+                                        .replaceAll('font size="5"', '')
+                                        .replaceAll('font size="4"', '')
+                                        .replaceAll('p align=', '')
+                                        .replaceAll('&gt;', '')
+                                        .replaceAll('', '')
+                                        .replaceAll('', '')
+                                        .replaceAll('', '')
+                                        .replaceAll('', '')
+                                        .replaceAll('', '')
+                                        .replaceAll('', '');
+
+                            abc[i]['Title'] = dd;
+                        }
+                        
                     this.totalRows = this.response0.data.total;
 
                     document.getElementById("spinner_").style.display = "none";
@@ -856,8 +939,7 @@
                 document.getElementById("_results").style.display = "none"; 
                 document.getElementById("spinner_").style.display = "block";
 
-                
-                
+            
                 try{
                     if(this.searchKeyword === ""){
                         this.response0 = await ticket_service.loadHoldings_Type_All(this.filterMaterialType, this.keyword_2, i, this.perPage);
@@ -1040,8 +1122,34 @@
                     }
 
                     this.ticket1 = this.response0.data.data;
-                    console.log("HELLO");
-                    console.log(this.ticket1.Title);
+                    const abc = this.ticket1;
+                        
+                        for (i = 0; i < abc.length; i++ ){
+                            const aa = abc[i]['Title'];
+                            const bb = {
+                                        '&lt;font size=&quot;3&quot;&gt;': '',
+                                        'b': '',
+                                        'c': ''
+                                        };
+                                                
+                            // const cc = aa.replace('&lt;font size=&quot;3&quot;&gt;','');                   
+                            const cc = aa.replace(/&lt;font size=&quot;3&quot;&gt;/g, '');                
+                            const dd = aa.replaceAll(/&lt;font size=&quot;3&quot;&gt;/g, '')
+                                        .replaceAll(/&lt;/g, '')
+                                        .replaceAll(/font&gt;/g, '')
+                                        .replaceAll('/', '')
+                                        .replaceAll('p>', '')
+                                        .replaceAll('<p>', '')
+                                        .replaceAll('</p>', '')
+                                        .replaceAll(/p&gt;/g, '')
+                                        .replaceAll(/&lt;/g, '')
+                                        .replaceAll('font face="Tahoma">', '')
+                                        .replaceAll('font>', '')
+                                        .replaceAll('&nbsp;', '')
+                                        .replaceAll('&quot;', '"');
+
+                            abc[i]['Title'] = dd;
+                        }
                     this.totalRows2 = this.response0.data.total;
 
                     document.getElementById("spinner_").style.display = "none";
