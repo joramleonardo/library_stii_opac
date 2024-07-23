@@ -110,6 +110,7 @@
                                                 <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>STII Bldg. ,Gen. Santos Ave., 
                                                 <br>Upper Bicutan, Taguig City, 
                                                 <br>Metro Manila, 1631, Philippines</span><br>
+                                                <span class="text-truncate me-3"><i class="far fa-envelope text-primary me-2"></i>library@stii.dost.gov.ph</span>
                                                 <!-- <span class="text-truncate me-3"><i class="far fa-envelope text-primary me-2"></i>com</span> -->
                                             </div>
                                         </div>
@@ -128,7 +129,6 @@
                                                 <h5 class="mb-3">Science Education Institute</h5>
                                                 <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>Level 2, Philippine Science Heritage Building, DOST Compound, 
                                                 <br>Bicutan 1631 Taguig, Philippines</span><br>
-                                                <!-- <span class="text-truncate me-3"><i class="far fa-envelope text-primary me-2"></i>com</span> -->
                                             </div>
                                         </div>
                                         <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
@@ -146,7 +146,7 @@
                                                 <h5 class="mb-3">National Academy of Science and Technology</h5>
                                                 <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>3/F Science Heritage Center Building, DOST Complex, 
                                                 <br>Bicutan 1631 Taguig, Philippines</span><br>
-                                                <!-- <span class="text-truncate me-3"><i class="far fa-envelope text-primary me-2"></i>com</span> -->
+                                                <span class="text-truncate me-3"><i class="far fa-envelope text-primary me-2"></i>jemapa@nast.dost.gov.ph</span>
                                             </div>
                                         </div>
                                         <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
@@ -270,7 +270,7 @@
                                             <div class="text-start ps-4">
                                                 <h5 class="mb-3">Philippine Science Highschool System</h5>
                                                 <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>DOST-Philipine Science High School, Agham Road, Diliman, Quezon City</span><br>
-                                                <!-- <span class="text-truncate me-3"><i class="far fa-envelope text-primary me-2"></i>com</span> -->
+                                                <span class="text-truncate me-3"><i class="far fa-envelope text-primary me-2"></i>library.mc@pshs.edu.ph</span>
                                             </div>
                                         </div>
                                         <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
@@ -330,6 +330,330 @@
                                         <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
                                             <div class="d-flex mb-3">
                                                 <a class="btn btn-primary" href="https://www.ptri.dost.gov.ph/" target="_blank">Visit Website</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- REGIONAL OFFICES -->
+                                <div class="job-item p-4 mb-4">
+                                    <div class="row g-4">
+                                        <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/logo-dost.png" alt="" style="width: 80px; height: 80px;">
+                                            <div class="text-start ps-4">
+                                                <h5 class="mb-3">DOST National Capital Region (NCR)</h5>
+                                                <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>DOST NCR Bldg., DOST Compound, Gen. Santos Ave., Bicutan, Taguig City</span><br>
+                                                <!-- <span class="text-truncate me-3"><i class="far fa-envelope text-primary me-2"></i>mirdctips@mirdc.dost.gov.ph</span> -->
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                            <div class="d-flex mb-3">
+                                                <a class="btn btn-primary" href="https://ncr.dost.gov.ph/" target="_blank">Visit Website</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="job-item p-4 mb-4">
+                                    <div class="row g-4">
+                                        <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/logo-dost.png" alt="" style="width: 80px; height: 80px;">
+                                            <div class="text-start ps-4">
+                                                <h5 class="mb-3">Ministry of Science and Technology</h5>
+                                                <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>
+                                                    Ministry of Science and Technology <br>
+                                                    Bangsamoro Autonomous Region in Muslim Mindanao <br>
+                                                    BARMM Complex, Cotabato City <br>
+                                                </span><br>
+                                                <!-- <span class="text-truncate me-3"><i class="far fa-envelope text-primary me-2"></i>mirdctips@mirdc.dost.gov.ph</span> -->
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                            <div class="d-flex mb-3">
+                                                <a class="btn btn-primary" href="https://most.bangsamoro.gov.ph/" target="_blank">Visit Website</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="job-item p-4 mb-4">
+                                    <div class="row g-4">
+                                        <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/logo-dost.png" alt="" style="width: 80px; height: 80px;">
+                                            <div class="text-start ps-4">
+                                                <h5 class="mb-3">DOST Cordillera Administrative Region (CAR)</h5>
+                                                <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>
+                                                    DOST Cordillera Administrative Region (CAR), <br>
+                                                    BSU Compound Km.6, La Trinidad, Benguet, Philippines, 2601
+                                                </span><br>
+                                                <!-- <span class="text-truncate me-3"><i class="far fa-envelope text-primary me-2"></i>mirdctips@mirdc.dost.gov.ph</span> -->
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                            <div class="d-flex mb-3">
+                                                <a class="btn btn-primary" href="https://car.dost.gov.ph/" target="_blank">Visit Website</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="job-item p-4 mb-4">
+                                    <div class="row g-4">
+                                        <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/logo-dost.png" alt="" style="width: 80px; height: 80px;">
+                                            <div class="text-start ps-4">
+                                                <h5 class="mb-3">DOST Region I</h5>
+                                                <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>
+                                                    DOST Region I, DMMMSU-MLU Campus, <br>
+                                                    DOST-1 Building 2500 San Fernando, Philippines
+                                                </span><br>
+                                                <span class="text-truncate me-3"><i class="far fa-envelope text-primary me-2"></i>mail.region1.dost.gov.ph</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                            <div class="d-flex mb-3">
+                                                <a class="btn btn-primary" href="https://region1.dost.gov.ph/" target="_blank">Visit Website</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="job-item p-4 mb-4">
+                                    <div class="row g-4">
+                                        <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/logo-dost.png" alt="" style="width: 80px; height: 80px;">
+                                            <div class="text-start ps-4">
+                                                <h5 class="mb-3">DOST Region II</h5>
+                                                <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>
+                                                    Dalan na Paccurofon, corner Matunung St., <br>
+                                                    Regional Government Center, Carig Sur, Tuguegarao City, Cagayan
+                                                </span><br>
+                                                <span class="text-truncate me-3"><i class="far fa-envelope text-primary me-2"></i>records@ro2.dost.gov.ph</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                            <div class="d-flex mb-3">
+                                                <a class="btn btn-primary" href="https://region2.dost.gov.ph/" target="_blank">Visit Website</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="job-item p-4 mb-4">
+                                    <div class="row g-4">
+                                        <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/logo-dost.png" alt="" style="width: 80px; height: 80px;">
+                                            <div class="text-start ps-4">
+                                                <h5 class="mb-3">DOST Region III</h5>
+                                                <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>
+                                                    DOST Region III, Diosdado Macapagal Government Center, <br>
+                                                    Maimpis, City of San Fernando, Pampanga 2000
+                                                </span><br>
+                                                <!-- <span class="text-truncate me-3"><i class="far fa-envelope text-primary me-2"></i>mirdctips@mirdc.dost.gov.ph</span> -->
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                            <div class="d-flex mb-3">
+                                                <a class="btn btn-primary" href="region3.dost.gov.ph" target="_blank">Visit Website</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="job-item p-4 mb-4">
+                                    <div class="row g-4">
+                                        <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/logo-dost.png" alt="" style="width: 80px; height: 80px;">
+                                            <div class="text-start ps-4">
+                                                <h5 class="mb-3">DOST Region IV-A (CALABARZON)</h5>
+                                                <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>
+                                                    DOST Region IV-A, Regional Science and Technology Center Complex, <br>
+                                                    Jamboree Road, Timugan, Los Banos, Laguna
+                                                </span><br>
+                                                <!-- <span class="text-truncate me-3"><i class="far fa-envelope text-primary me-2"></i>mirdctips@mirdc.dost.gov.ph</span> -->
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                            <div class="d-flex mb-3">
+                                                <a class="btn btn-primary" href="https://region4a.dost.gov.ph/" target="_blank">Visit Website</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="job-item p-4 mb-4">
+                                    <div class="row g-4">
+                                        <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/logo-dost.png" alt="" style="width: 80px; height: 80px;">
+                                            <div class="text-start ps-4">
+                                                <h5 class="mb-3">DOST Region IV-B (MIMAROPA)</h5>
+                                                <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>4/F DOST-PTRI Building, Gen. Santos Avenue, Bicutan, Taguig City</span><br>
+                                                <!-- <span class="text-truncate me-3"><i class="far fa-envelope text-primary me-2"></i>mirdctips@mirdc.dost.gov.ph</span> -->
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                            <div class="d-flex mb-3">
+                                                <a class="btn btn-primary" href="https://region4b.dost.gov.ph/" target="_blank">Visit Website</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="job-item p-4 mb-4">
+                                    <div class="row g-4">
+                                        <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/logo-dost.png" alt="" style="width: 80px; height: 80px;">
+                                            <div class="text-start ps-4">
+                                                <h5 class="mb-3">DOST Region V</h5>
+                                                <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>DOST Region V, Regional Center Site, Rawis Legazpi City, Albay 4500</span><br>
+                                                <!-- <span class="text-truncate me-3"><i class="far fa-envelope text-primary me-2"></i>mirdctips@mirdc.dost.gov.ph</span> -->
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                            <div class="d-flex mb-3">
+                                                <a class="btn btn-primary" href="https://region5.dost.gov.ph/" target="_blank">Visit Website</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="job-item p-4 mb-4">
+                                    <div class="row g-4">
+                                        <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/logo-dost.png" alt="" style="width: 80px; height: 80px;">
+                                            <div class="text-start ps-4">
+                                                <h5 class="mb-3">DOST Region VI</h5>
+                                                <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>DOST Region VI, Magsaysay Village, La Paz, Iloilo City, Iloilo 5000</span><br>
+                                                <!-- <span class="text-truncate me-3"><i class="far fa-envelope text-primary me-2"></i></span> -->
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                            <div class="d-flex mb-3">
+                                                <a class="btn btn-primary" href="https://region6.dost.gov.ph/" target="_blank">Visit Website</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="job-item p-4 mb-4">
+                                    <div class="row g-4">
+                                        <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/logo-dost.png" alt="" style="width: 80px; height: 80px;">
+                                            <div class="text-start ps-4">
+                                                <h5 class="mb-3">DOST Region VII</h5>
+                                                <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>DOST VII, Sudlon, Lahug, Cebu City, 6000 Cebu</span><br>
+                                                <!-- <span class="text-truncate me-3"><i class="far fa-envelope text-primary me-2"></i>mirdctips@mirdc.dost.gov.ph</span> -->
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                            <div class="d-flex mb-3">
+                                                <a class="btn btn-primary" href="https://region7.dost.gov.ph/" target="_blank">Visit Website</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="job-item p-4 mb-4">
+                                    <div class="row g-4">
+                                        <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/logo-dost.png" alt="" style="width: 80px; height: 80px;">
+                                            <div class="text-start ps-4">
+                                                <h5 class="mb-3">DOST Region VIII</h5>
+                                                <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>
+                                                    DOST VIII, Government Center, Candahug, Palo, Leyte, 6501,Leyte
+                                                </span><br>
+                                                <span class="text-truncate me-3"><i class="far fa-envelope text-primary me-2"></i>records@region8.dost.gov.ph</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                            <div class="d-flex mb-3">
+                                                <a class="btn btn-primary" href="https://region8.dost.gov.ph/" target="_blank">Visit Website</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="job-item p-4 mb-4">
+                                    <div class="row g-4">
+                                        <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/logo-dost.png" alt="" style="width: 80px; height: 80px;">
+                                            <div class="text-start ps-4">
+                                                <h5 class="mb-3">DOST Region IX</h5>
+                                                <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>
+                                                    DOST Region IX, Capt. F. Marcos St. cor. Gen. Alvarez St., <br>
+                                                    Pettit Barracks, Zone IV 7000 Zamboanga City
+                                                </span><br>
+                                                <!-- <span class="text-truncate me-3"><i class="far fa-envelope text-primary me-2"></i>mirdctips@mirdc.dost.gov.ph</span> -->
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                            <div class="d-flex mb-3">
+                                                <a class="btn btn-primary" href="https://region9.dost.gov.ph/" target="_blank">Visit Website</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="job-item p-4 mb-4">
+                                    <div class="row g-4">
+                                        <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/logo-dost.png" alt="" style="width: 80px; height: 80px;">
+                                            <div class="text-start ps-4">
+                                                <h5 class="mb-3">DOST Region X</h5>
+                                                <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>
+                                                    DOST-X, J.V. Seriña St., Carmen 9000 Cagayan de Oro
+                                                </span><br>
+                                                <!-- <span class="text-truncate me-3"><i class="far fa-envelope text-primary me-2"></i>mirdctips@mirdc.dost.gov.ph</span> -->
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                            <div class="d-flex mb-3">
+                                                <a class="btn btn-primary" href="https://region10.dost.gov.ph/" target="_blank">Visit Website</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="job-item p-4 mb-4">
+                                    <div class="row g-4">
+                                        <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/logo-dost.png" alt="" style="width: 80px; height: 80px;">
+                                            <div class="text-start ps-4">
+                                                <h5 class="mb-3">DOST Region XI</h5>
+                                                <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>
+                                                   DOST Region XI,Friendship cor. Dumanlas Rds., Bajada, Davao City
+                                                </span><br>
+                                                <!-- <span class="text-truncate me-3"><i class="far fa-envelope text-primary me-2"></i>mirdctips@mirdc.dost.gov.ph</span> -->
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                            <div class="d-flex mb-3">
+                                                <a class="btn btn-primary" href="https://region11.dost.gov.ph/" target="_blank">Visit Website</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="job-item p-4 mb-4">
+                                    <div class="row g-4">
+                                        <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/logo-dost.png" alt="" style="width: 80px; height: 80px;">
+                                            <div class="text-start ps-4">
+                                                <h5 class="mb-3">DOST Region XII</h5>
+                                                <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>
+                                                    DOST Regional Office No. XII <br>
+                                                    Philippine National Halal Laboratory and Science Center, <br>
+                                                    Brgy. Paraiso, Koronadal City. South Cotabato
+                                                </span><br>
+                                                <!-- <span class="text-truncate me-3"><i class="far fa-envelope text-primary me-2"></i>mirdctips@mirdc.dost.gov.ph</span> -->
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                            <div class="d-flex mb-3">
+                                                <a class="btn btn-primary" href="https://region12.dost.gov.ph/" target="_blank">Visit Website</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="job-item p-4 mb-4">
+                                    <div class="row g-4">
+                                        <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="img/logo-dost.png" alt="" style="width: 80px; height: 80px;">
+                                            <div class="text-start ps-4">
+                                                <h5 class="mb-3">DOST CARAGA Region</h5>
+                                                <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>
+                                                    DOST CARAGA Region, CSU Campus Ampayon, 8600 Butuan City
+                                                </span><br>
+                                                <span class="text-truncate me-3"><i class="far fa-envelope text-primary me-2"></i>ord@caraga.dost.gov.ph</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                            <div class="d-flex mb-3">
+                                                <a class="btn btn-primary" href="https://caraga.dost.gov.ph/" target="_blank">Visit Website</a>
                                             </div>
                                         </div>
                                     </div>
