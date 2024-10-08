@@ -19,8 +19,13 @@
                 <div class="slider-content">
                     <div class="row">
                         <form id="search-form" name="gs" method="submit" role="search" action="#">
+                            <!-- <div class="row" style="margin-top: 5px; ">
+                                <div class="col-lg-4" style="text-align: left;">
+                                    <span style="color: #000000; font-weight: bold; ">Filter By </span>
+                                </div>
+                            </div> -->
                             <div class="row">
-                                <div class="col-lg-2" style="text-align: left;">
+                                <div class="col-lg-4" style="text-align: left;">
                                     <span style="color: #000000; font-weight: bold; "> Material Type: </span>
                                         <b-form-select
                                         id="materialType"
@@ -28,7 +33,7 @@
                                         :options="b"
                                         v-model="filterMaterialType"></b-form-select>
                                 </div>
-                                <div class="col-lg-2" style="text-align: left;">
+                                <div class="col-lg-4" style="text-align: left;">
                                     <span style="color: #000000; font-weight: bold"> Field: </span>
                                         <b-form-select
                                         id="category"
@@ -36,21 +41,29 @@
                                         :options="a"
                                         v-model="filterCategory"></b-form-select>
                                 </div>
-                                <div class="col-lg-6" style="text-align: left;">
-                                    <span style="color: #000000; font-weight: bold"> Keyword: </span>
-                                    <b-form-input class="mb-4 mr-sm-3 mb-sm-0" v-model="searchKeyword" type="search" required> </b-form-input>
+                                <div class="col-lg-4" style="text-align: left;">
+                                    <span style="color: #000000; font-weight: bold"> Location: </span>
+                                        <b-form-select
+                                        id="category"
+                                        class="mb-4 mr-sm-3 mb-sm-0"
+                                        :options="c"
+                                        v-model="filterLocation"></b-form-select>
                                 </div>
-                                <div class="col-lg-2">        
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-10" style="text-align: left;">
+                                    <span style="color: #000000; font-weight: bold"> Keyword: </span>
+                                    <b-form-input class="mb-4 mr-sm-3 mb-sm-0" v-model="searchKeyword" type="search" required style="margin-top: 5px"> </b-form-input>
+                                </div>
+                                <div class="col-lg-2">   
                                     <div class="main-button">
-                                       
-                                        <router-link :to="{name : 'opac-search', params: { word: searchKeyword, filter: filterCategory, type: filterMaterialType }}">
+                                        <router-link :to="{name : 'opac-search', params: { word: searchKeyword, filter: filterCategory, type: filterMaterialType, location: filterLocation }}">
                                         <button @click="searchFunction2" type="button" class="btn btn-primary" data-mdb-ripple-init>
                                             Search
                                         </button>
                                     </router-link>
                                     </div>
                                 </div>
-                                
                             </div>
                         </form>
                     </div>
@@ -563,6 +576,7 @@
             keyword_2: 'All',
             filterCategory: 'All',
             filterMaterialType: 'ALL',
+            filterLocation: 'ALL',
             response0: '',
             term:'',
             ticket: [],
@@ -617,6 +631,29 @@
                 { text: 'Technical Reports', value: 'REPORTS' },
                 { text: 'Theses/Dissertations', value: 'THESES' },
                 { text: 'Vertical Files', value: 'VF' },
+            ],
+            c: [
+                { text: 'All Location', value: 'ALL' }, 
+                { text: 'ARMM', value: 'ARMM' },{ text: 'ASTI', value: 'ASTI' },
+                { text: 'CARAGA', value: 'CARAGA' },{ text: 'DAOSEC', value: 'DAOSEC' },
+                { text: 'DOST', value: 'DOST' },{ text: 'DOST-NCR', value: 'DOST-NCR' },
+                { text: 'FNRI', value: 'FNRI' },{ text: 'FPRDI', value: 'FPRDI' },
+                { text: 'ICTO', value: 'ICTO' },{ text: 'ITDI', value: 'ITDI' },
+                { text: 'MIRDC', value: 'MIRDC' },{ text: 'NAST', value: 'NAST' },
+                { text: 'NLP', value: 'NLP' },{ text: 'NRCP', value: 'NRCP' },
+                { text: 'NUTRINET', value: 'NUTRINET' },{ text: 'OSEC', value: 'OSEC' },
+                { text: 'PAGASA', value: 'PAGASA' },{ text: 'PCAARRD', value: 'PCAARRD' },
+                { text: 'PCAMRD', value: 'PCAMRD' },{ text: 'PCARRD', value: 'PCARRD' },
+                { text: 'PCASTRD', value: 'PCASTRD' },{ text: 'PCHRD', value: 'PCHRD' },
+                { text: 'PCIEERD', value: 'PCIEERD' },{ text: 'PES', value: 'PES' },
+                { text: 'PHIVOLCS', value: 'PHIVOLCS' },{ text: 'PNRI', value: 'PNRI' },
+                { text: 'PSHS', value: 'PSHS' },{ text: 'PTRI', value: 'PTRI' },
+                { text: 'RO4-A', value: 'RO4-A' },{ text: 'RO7', value: 'RO7' },
+                { text: 'RO9', value: 'RO9' },{ text: 'ROS', value: 'ROS' },
+                { text: 'ROX', value: 'ROX' },{ text: 'ROXII', value: 'ROXII' },
+                { text: 'SEI', value: 'SEI' },{ text: 'STII', value: 'STII' },
+                { text: 'TAPI', value: 'TAPI' },{ text: 'TRC', value: 'TRC' },
+                { text: 'UP', value: 'UP' }
             ],
         }
         },

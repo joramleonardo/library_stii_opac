@@ -460,7 +460,7 @@
                         </div>
                         <div class="bg-light rounded p-3 mb-4">
                             <h4 class="mb-3">Request Material</h4>
-                            <p class="m-0 mb-4">Copy the details below and email it at
+                            <p class="m-0 mb-4">Click the button below to copy the material details below and email it at
                                 <span style="font-weight: bold">
                                     library@stii.dost.gov.ph
                                 </span>
@@ -556,7 +556,7 @@
                         </div>
                         <div class="bg-light rounded p-3 mb-4">
                             <h4 class="mb-3">Request Material</h4>
-                            <p class="m-0 mb-4">Copy the details below and email it at
+                            <p class="m-0 mb-4">Click the button below to copy the material details below and email it at
                                 <span style="font-weight: bold">
                                     library@stii.dost.gov.ph
                                 </span>
@@ -645,7 +645,7 @@
                         </div>
                         <div class="bg-light rounded p-3 mb-4">
                             <h4 class="mb-3">Request Material</h4>
-                            <p class="m-0 mb-4">Copy the details below and email it at
+                            <p class="m-0 mb-4">Click the button below to copy the material details below and email it at
                                 <span style="font-weight: bold">
                                     library@stii.dost.gov.ph
                                 </span>

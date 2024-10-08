@@ -49,7 +49,7 @@ const routes = [
                 component: Landing_Page
             },
             {
-                path: '/opac/search/:type/:filter/:word',
+                path: '/opac/search/:type/:filter/:location/:word',
                 name: 'opac-search',
                 component: OPAC_Search_Page
             },
